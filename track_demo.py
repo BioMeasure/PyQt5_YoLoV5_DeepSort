@@ -208,7 +208,6 @@ class Ui_MainWindow(QWidget):
             self.paint_thread.wait()
             print(self.paint_thread.isFinished())
             self.consume_thread.stop()
-            self.paint_thread.stop()
             self.cap.release()
             self.consume_thread.quit()
             self.consume_thread.wait()
@@ -565,7 +564,7 @@ class ConsumeThread(QThread):
                     self.queue.put(im0)
                     if self.queue.qsize() > 1:
                         self.qmut_1.unlock()
-                    self.queue.get() if self.queue.qsize() > 1 else self.msleep(30)
+                    self.queue.get(False) if self.queue.qsize() > 1 else self.msleep(30)
 
         print('Done. (%.3fs)' % (time.time() - self.t0))
 
@@ -584,11 +583,13 @@ class ConsumeThread(QThread):
                 # 不清理队列的时候反倒是不会有Bug....
                 # 也不知道这个的原理是什么
                 # 在这里mark一下，以后有机会了学习学习.....
+                # Process finished with exit code 139 (interrupted by signal 11: SIGSEGV)
+                # This Bug again..
                 # while True:
                 #     print("Clear The Queue!!")
                 #     if not self.queue.empty():
                 #         self.queue.get(False)
-                #         self.msleep(30)
+                #         # self.msleep(30)
                 #     else:
                 #         break
                 print('Done. (%.3fs)' % (time.time() - self.t0))
