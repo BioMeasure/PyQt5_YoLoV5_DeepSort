@@ -23,7 +23,7 @@ class Ui_MainWindow(QWidget):
         self.origin_coord = [960, 540]
         self.func_weight = [1, 0, 0]
         self.product_thread = ProductThread(cap=self.cap)
-        self.consume_thread = ConsumeThread(cap=self.cap, qmut_1=self.qmut_1, queue=self.queue)
+        self.consume_thread = ConsumeThread(qmut_1=self.qmut_1, queue=self.queue)
         self.paint_thread = PaintLineThread(qmut_1=self.qmut_1, origin_coord=self.origin_coord,
                                             func_weight=self.func_weight, queue=self.queue)
         self.set_ui()
@@ -191,8 +191,6 @@ class Ui_MainWindow(QWidget):
 
     def button_detect_click(self):
         if not self.open_close:
-            print("Before Start ConsumeThread is Running?--->" + str(self.consume_thread.isRunning()))
-            self.open_close = self.cap.open(self.s_rtsp)
             self.consume_thread.begin()
             self.consume_thread.start()
             self.open_close = True
@@ -200,22 +198,16 @@ class Ui_MainWindow(QWidget):
             self.paint_thread.start()
             self.button_detect.setText(u'停止检测')
         else:
-            print("Before Stop ConsumeThread is Running?--->" + str(self.consume_thread.isRunning()))
             print("Close The Camera !!")
             self.open_close = False
             self.paint_thread.stop()
             self.paint_thread.quit()
             self.paint_thread.wait()
-            print(self.paint_thread.isFinished())
             self.consume_thread.stop()
-            self.cap.release()
             self.consume_thread.quit()
             self.consume_thread.wait()
-            print(self.consume_thread.isFinished())
-            print("step 1111111111111")
-
+            self.queue.join()
             self.label_show_camera.clear()
-            print("step 333333333333333")
             self.button_detect.setText(u'开始检测')
             self.button_sum_person.setText(u'')
             self.button_go_person.setText(u'')
@@ -365,6 +357,7 @@ class PaintLineThread(QThread):
                 # image = self.get_cover(image)
                 self.detOut.emit(image)
                 self.msleep(30)
+                self.queue.task_done()
             self.qmut_1.unlock()
         self.qmut_1.unlock()
         print("Stop Painting!!!")
@@ -406,12 +399,11 @@ class ConsumeThread(QThread):
     sum_person = pyqtSignal(int)
     bbox_id = pyqtSignal(list)
 
-    def __init__(self, cap, qmut_1, queue, parent=None):
+    def __init__(self, qmut_1, queue, parent=None):
         super(ConsumeThread, self).__init__(parent)
         self.queue = queue
         self.Consuming = False
         self.qmut_1 = qmut_1
-        self.cap = cap
 
     def stop(self):
         self.Consuming = False
@@ -478,7 +470,7 @@ class ConsumeThread(QThread):
         if webcam:
             view_img = True
             cudnn.benchmark = True  # set True to speed up constant image size inference
-            dataset = LoadStreams_test(self.cap, source, img_size=imgsz)
+            dataset = LoadStreams(source, img_size=imgsz)
         else:
             view_img = True
             dataset = LoadImages(source, img_size=imgsz)
@@ -493,6 +485,7 @@ class ConsumeThread(QThread):
 
         for frame_idx, (path, img, im0s, vid_cap) in enumerate(dataset):
             if not self.Consuming:
+                # dataset.stop_cap()
                 raise StopIteration
             img = torch.from_numpy(img).to(device)
             img = img.half() if half else img.float()  # uint8 to fp16/32
@@ -512,6 +505,7 @@ class ConsumeThread(QThread):
             # Process detections
             for i, det in enumerate(pred):  # detections per image
                 if not self.Consuming:
+                    # dataset.stop_cap()
                     raise StopIteration
                 if webcam:  # batch_size >= 1
                     p, s, im0 = path[i], '%g: ' % i, im0s[i].copy()
@@ -562,9 +556,14 @@ class ConsumeThread(QThread):
                 if view_img:
                     # self.detOut.emit(im0)
                     self.queue.put(im0)
+                    # if self.queue.qsize() > 3:
+                    self.qmut_1.unlock()
                     if self.queue.qsize() > 1:
-                        self.qmut_1.unlock()
-                    self.queue.get(False) if self.queue.qsize() > 1 else self.msleep(30)
+
+                        self.queue.get(False)
+                        self.queue.task_done()
+                    else:
+                        self.msleep(30)
 
         print('Done. (%.3fs)' % (time.time() - self.t0))
 
@@ -585,13 +584,15 @@ class ConsumeThread(QThread):
                 # 在这里mark一下，以后有机会了学习学习.....
                 # Process finished with exit code 139 (interrupted by signal 11: SIGSEGV)
                 # This Bug again..
-                # while True:
-                #     print("Clear The Queue!!")
-                #     if not self.queue.empty():
-                #         self.queue.get(False)
-                #         # self.msleep(30)
-                #     else:
-                #         break
+                while True:
+                    print("Clear The Queue!!")
+                    if not self.queue.empty():
+                        self.queue.get(False)
+                        # self.msleep(30)
+                        self.queue.task_done()
+                    else:
+                        break
+
                 print('Done. (%.3fs)' % (time.time() - self.t0))
                 print("Stop!!!!!!!!!!!!")
 

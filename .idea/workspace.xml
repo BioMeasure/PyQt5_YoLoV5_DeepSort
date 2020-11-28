@@ -25,9 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65a0e441-c224-40d0-b8d7-34774d63c974" name="Default Changelist" comment="test push">
+    <list default="true" id="65a0e441-c224-40d0-b8d7-34774d63c974" name="Default Changelist" comment="signal 11: SIGSEGV Unsolved">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/track_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/track_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5/utils/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5/utils/datasets.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +235,7 @@
       <workItem from="1606534075192" duration="457000" />
       <workItem from="1606534818565" duration="468000" />
       <workItem from="1606535430249" duration="5965000" />
-      <workItem from="1606554375819" duration="333000" />
+      <workItem from="1606554375819" duration="8591000" />
     </task>
     <task id="LOCAL-00001" summary="test push">
       <created>1606537225349</created>
@@ -243,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606537225349</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="signal 11: SIGSEGV Unsolved">
+      <created>1606554736640</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606554736640</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +283,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test push" />
-    <option name="LAST_COMMIT_MESSAGE" value="test push" />
+    <MESSAGE value="signal 11: SIGSEGV Unsolved" />
+    <option name="LAST_COMMIT_MESSAGE" value="signal 11: SIGSEGV Unsolved" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2379" y="720" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606206379236">
@@ -290,22 +299,22 @@
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
     <state x="856" y="681" key="FileChooserDialogImpl/98.36.3742.2124@98.36.3742.2124" timestamp="1605940319474" />
-    <state width="1949" height="500" key="GridCell.Tab.0.bottom" timestamp="1606554179899">
+    <state width="1949" height="500" key="GridCell.Tab.0.bottom" timestamp="1606568169209">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
-    <state width="1949" height="500" key="GridCell.Tab.0.bottom/98.36.3742.2124@98.36.3742.2124" timestamp="1606554179899" />
-    <state width="1949" height="500" key="GridCell.Tab.0.center" timestamp="1606554179898">
+    <state width="1949" height="500" key="GridCell.Tab.0.bottom/98.36.3742.2124@98.36.3742.2124" timestamp="1606568169209" />
+    <state width="1949" height="500" key="GridCell.Tab.0.center" timestamp="1606568169209">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
-    <state width="1949" height="500" key="GridCell.Tab.0.center/98.36.3742.2124@98.36.3742.2124" timestamp="1606554179898" />
-    <state width="1949" height="500" key="GridCell.Tab.0.left" timestamp="1606554179897">
+    <state width="1949" height="500" key="GridCell.Tab.0.center/98.36.3742.2124@98.36.3742.2124" timestamp="1606568169209" />
+    <state width="1949" height="500" key="GridCell.Tab.0.left" timestamp="1606568169209">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
-    <state width="1949" height="500" key="GridCell.Tab.0.left/98.36.3742.2124@98.36.3742.2124" timestamp="1606554179897" />
-    <state width="1949" height="500" key="GridCell.Tab.0.right" timestamp="1606554179899">
+    <state width="1949" height="500" key="GridCell.Tab.0.left/98.36.3742.2124@98.36.3742.2124" timestamp="1606568169209" />
+    <state width="1949" height="500" key="GridCell.Tab.0.right" timestamp="1606568169209">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
-    <state width="1949" height="500" key="GridCell.Tab.0.right/98.36.3742.2124@98.36.3742.2124" timestamp="1606554179899" />
+    <state width="1949" height="500" key="GridCell.Tab.0.right/98.36.3742.2124@98.36.3742.2124" timestamp="1606568169209" />
     <state width="1949" height="716" key="GridCell.Tab.1.bottom" timestamp="1606484719241">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
@@ -326,10 +335,10 @@
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
     <state x="428" y="465" key="SettingsEditor/98.36.3742.2124@98.36.3742.2124" timestamp="1605582123858" />
-    <state x="2069" y="648" width="1400" height="914" key="Vcs.Push.Dialog.v2" timestamp="1606537531499">
+    <state x="2069" y="648" width="1400" height="914" key="Vcs.Push.Dialog.v2" timestamp="1606554744512">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
-    <state x="2069" y="648" width="1400" height="914" key="Vcs.Push.Dialog.v2/98.36.3742.2124@98.36.3742.2124" timestamp="1606537531499" />
+    <state x="2069" y="648" width="1400" height="914" key="Vcs.Push.Dialog.v2/98.36.3742.2124@98.36.3742.2124" timestamp="1606554744512" />
     <state x="1987" y="595" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606375317983">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
@@ -359,7 +368,7 @@
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1606207141861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$main.coverage" NAME="main Coverage Results" MODIFIED="1606205561914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask_html" />
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$camera.coverage" NAME="camera Coverage Results" MODIFIED="1606205210682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyQt5_YoLoV5_DeepSort$track_demo.coverage" NAME="track_demo Coverage Results" MODIFIED="1606554627698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyQt5_YoLoV5_DeepSort$track_demo.coverage" NAME="track_demo Coverage Results" MODIFIED="1606568169203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$track.coverage" NAME="track Coverage Results" MODIFIED="1606462525163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$QThread_test2.coverage" NAME="detect_demo Coverage Results" MODIFIED="1606201237702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$pytest_in_test_lock_py.coverage" NAME="pytest in test_lock.py Coverage Results" MODIFIED="1606355444186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
