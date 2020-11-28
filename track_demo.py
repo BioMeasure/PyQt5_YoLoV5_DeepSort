@@ -365,7 +365,7 @@ class PaintLineThread(QThread):
                 image = self.get_line(image)
                 # image = self.get_cover(image)
                 self.detOut.emit(image)
-                # self.msleep(30)
+                self.msleep(30)
             self.qmut_1.unlock()
         self.qmut_1.unlock()
         print("Stop Painting!!!")
@@ -406,7 +406,6 @@ class ProductThread(QThread):
 class ConsumeThread(QThread):
     sum_person = pyqtSignal(int)
     bbox_id = pyqtSignal(list)
-    handle = -1
 
     def __init__(self, cap, qmut_1, queue, parent=None):
         super(ConsumeThread, self).__init__(parent)
@@ -423,7 +422,7 @@ class ConsumeThread(QThread):
 
     def opts(self):
         parser = argparse.ArgumentParser()
-        parser.add_argument('--weights', type=str, default='yolov5/weights/yolov5s.pt', help='model.pt path')
+        parser.add_argument('--weights', type=str, default='yolov5/weights/yolov5x.pt', help='model.pt path')
         parser.add_argument('--source', type=str, default='rtsp://iscas:opqwer12@192.168.100.176:554/Streaming'
                                                           '/Channels/101', help='source')  # file/folder, 0 for webcam
         parser.add_argument('--output', type=str, default='inference/output', help='output folder')  # output folder
@@ -532,7 +531,7 @@ class ConsumeThread(QThread):
                         s += '%g %ss, ' % (n, names[int(c)])  # add to string
                     # 将当前帧的总人数发送给前端pyqt界面
                     self.sum_person.emit(n)
-
+                    self.msleep(30)
                     bbox_xywh = []
                     confs = []
 
@@ -555,7 +554,7 @@ class ConsumeThread(QThread):
                         bbox_xyxy = outputs[:, :4]
                         identities = outputs[:, -1]
                         self.bbox_id.emit([bbox_xyxy, identities])
-
+                        self.msleep(30)
                         draw_boxes(im0, bbox_xyxy, identities)
 
                 # Print time (inference + NMS)
@@ -581,13 +580,16 @@ class ConsumeThread(QThread):
             except StopIteration:
                 print("SOPT ITERATION!!!!!")
             finally:
-                print("Clear The Queue!!")
-
-                # while self.queue:
+                # print("Clear The Queue!!")
+                # 不清理队列的时候反倒是不会有Bug....
+                # 也不知道这个的原理是什么
+                # 在这里mark一下，以后有机会了学习学习.....
+                # while True:
                 #     print("Clear The Queue!!")
-                #     self.queue.get()
-                #     self.msleep(30)
-                #     if self.queue.qsize() < 1:
+                #     if not self.queue.empty():
+                #         self.queue.get(False)
+                #         self.msleep(30)
+                #     else:
                 #         break
                 print('Done. (%.3fs)' % (time.time() - self.t0))
                 print("Stop!!!!!!!!!!!!")

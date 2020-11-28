@@ -20,13 +20,15 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65a0e441-c224-40d0-b8d7-34774d63c974" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/track_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/track_demo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +55,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="28540ddf-5c6e-49d0-a958-7e0b307056ca" />
@@ -218,6 +233,8 @@
       <workItem from="1606457774795" duration="21000" />
       <workItem from="1606457806267" duration="11272000" />
       <workItem from="1606534075192" duration="457000" />
+      <workItem from="1606534818565" duration="468000" />
+      <workItem from="1606535430249" duration="1268000" />
     </task>
     <servers />
   </component>
@@ -235,7 +252,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -261,22 +278,22 @@
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
     <state x="856" y="681" key="FileChooserDialogImpl/98.36.3742.2124@98.36.3742.2124" timestamp="1605940319474" />
-    <state width="1949" height="500" key="GridCell.Tab.0.bottom" timestamp="1606534531564">
+    <state width="1949" height="500" key="GridCell.Tab.0.bottom" timestamp="1606536599202">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
-    <state width="1949" height="500" key="GridCell.Tab.0.bottom/98.36.3742.2124@98.36.3742.2124" timestamp="1606534531564" />
-    <state width="1949" height="500" key="GridCell.Tab.0.center" timestamp="1606534531563">
+    <state width="1949" height="500" key="GridCell.Tab.0.bottom/98.36.3742.2124@98.36.3742.2124" timestamp="1606536599202" />
+    <state width="1949" height="500" key="GridCell.Tab.0.center" timestamp="1606536599201">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
-    <state width="1949" height="500" key="GridCell.Tab.0.center/98.36.3742.2124@98.36.3742.2124" timestamp="1606534531563" />
-    <state width="1949" height="500" key="GridCell.Tab.0.left" timestamp="1606534531563">
+    <state width="1949" height="500" key="GridCell.Tab.0.center/98.36.3742.2124@98.36.3742.2124" timestamp="1606536599201" />
+    <state width="1949" height="500" key="GridCell.Tab.0.left" timestamp="1606536599201">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
-    <state width="1949" height="500" key="GridCell.Tab.0.left/98.36.3742.2124@98.36.3742.2124" timestamp="1606534531563" />
-    <state width="1949" height="500" key="GridCell.Tab.0.right" timestamp="1606534531563">
+    <state width="1949" height="500" key="GridCell.Tab.0.left/98.36.3742.2124@98.36.3742.2124" timestamp="1606536599201" />
+    <state width="1949" height="500" key="GridCell.Tab.0.right" timestamp="1606536599202">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
-    <state width="1949" height="500" key="GridCell.Tab.0.right/98.36.3742.2124@98.36.3742.2124" timestamp="1606534531563" />
+    <state width="1949" height="500" key="GridCell.Tab.0.right/98.36.3742.2124@98.36.3742.2124" timestamp="1606536599202" />
     <state width="1949" height="716" key="GridCell.Tab.1.bottom" timestamp="1606484719241">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
@@ -297,14 +314,18 @@
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
     <state x="428" y="465" key="SettingsEditor/98.36.3742.2124@98.36.3742.2124" timestamp="1605582123858" />
+    <state x="2069" y="648" width="1400" height="914" key="Vcs.Push.Dialog.v2" timestamp="1606536697907">
+      <screen x="98" y="36" width="3742" height="2124" />
+    </state>
+    <state x="2069" y="648" width="1400" height="914" key="Vcs.Push.Dialog.v2/98.36.3742.2124@98.36.3742.2124" timestamp="1606536697907" />
     <state x="1987" y="595" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606375317983">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
     <state x="1987" y="595" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/98.36.3742.2124@98.36.3742.2124" timestamp="1606375317983" />
-    <state x="2117" y="519" width="1306" height="1470" key="search.everywhere.popup" timestamp="1606281867577">
+    <state x="2117" y="519" width="1437" height="1470" key="search.everywhere.popup" timestamp="1606536556800">
       <screen x="98" y="36" width="3742" height="2124" />
     </state>
-    <state x="2117" y="519" width="1306" height="1470" key="search.everywhere.popup/98.36.3742.2124@98.36.3742.2124" timestamp="1606281867577" />
+    <state x="2117" y="519" width="1437" height="1470" key="search.everywhere.popup/98.36.3742.2124@98.36.3742.2124" timestamp="1606536556800" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -326,7 +347,7 @@
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1606207141861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$main.coverage" NAME="main Coverage Results" MODIFIED="1606205561914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask_html" />
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$camera.coverage" NAME="camera Coverage Results" MODIFIED="1606205210682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PyQt5_YoLoV5_DeepSort$track_demo.coverage" NAME="track_demo Coverage Results" MODIFIED="1606534180396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyQt5_YoLoV5_DeepSort$track_demo.coverage" NAME="track_demo Coverage Results" MODIFIED="1606536395855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$track.coverage" NAME="track Coverage Results" MODIFIED="1606462525163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$QThread_test2.coverage" NAME="detect_demo Coverage Results" MODIFIED="1606201237702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Yolov5_DeepSort_Pytorch$pytest_in_test_lock_py.coverage" NAME="pytest in test_lock.py Coverage Results" MODIFIED="1606355444186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
