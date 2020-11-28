@@ -207,7 +207,6 @@ class Ui_MainWindow(QWidget):
             self.paint_thread.quit()
             self.paint_thread.wait()
             print(self.paint_thread.isFinished())
-
             self.consume_thread.stop()
             self.paint_thread.stop()
             self.cap.release()
